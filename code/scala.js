@@ -1,37 +1,45 @@
 
 const fs = require('fs');
 const fg = require('fast-glob');
+const path = require('path');
 
 // the tuning and center note value
 // for 12-TET tuning this would be A = 440Hz and A = midinote 69
 // or equivalent to this is also C = 261.63Hz and C = midinote 60
-let tune = 440.0;
-let centerValue = 69;
+
+let scl = { 
+	'description' : '',
+	'size' : 1,
+	'cents' : [ 0 ],
+	'range' : 1200,
+	'tune' : 440,
+	'center' : 69
+};
+
+let sclDict = {};
 
 function setTune(v){
-	tune = v;
+	scl.tune = v;
 }
 exports.setTune = setTune;
 
 function setCenter(v){
-	centerValue = v;
+	scl.center = v;
 }
 exports.setCenter = setCenter;
 
-// const cwd = process.cwd();
-
-// loadFiles('scl').forEach(f => {
-// 	w = parseScala(f).width;
-// 	if (w != 1200){
-// 		console.log("not 1 octave:", w, f);
-// 	}
-// });
-
-// console.log(frequencyChart(parseScala('12-TET.scl')));
-
 function loadFiles(fold){
-	return fg.sync(fold+"/**/*.scl", { extglob: true });
+	let files = fg.sync(fold+"/**/*.scl", { extglob: true });
+	let names = [];
+
+	files.forEach((f) => {
+		let file = path.parse(f);
+		sclDict[file.name] = f;
+		names.push(file.name);
+	});
+	return names;
 }
+exports.loadFiles = loadFiles;
 
 function parseScala(f){
 	let file = fs.readFileSync(f, 'utf8');
@@ -41,12 +49,6 @@ function parseScala(f){
 	// console.log('@file', file);
 
 	let l = 0, n = 0;
-	let scl = { 
-		'description' : '',
-		'size' : 0,
-		'cents' : [ 0.0 ],
-		'octave' : 0
-	};
 
 	for (var i=0; i<file.length; i++){
 		let line = file[i];
@@ -94,7 +96,7 @@ function parseScala(f){
 	// sort the cent values
 	scl['cents'] = scl.cents.sort((a, b) => {return a-b});
 	// last value is width of "octave" (usually an octave of 1200)
-	scl['octave'] = scl.cents.pop();
+	scl['range'] = scl.cents.pop();
 	// console.log('@scl', scl);
 	return scl;
 }
