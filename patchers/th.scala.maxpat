@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 86.0, 78.0, 652.0, 783.0 ],
+		"rect" : [ 39.0, 78.0, 652.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,32 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 201.0, 432.0, 240.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"autostart" : 1,
+						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
+						"watch" : 1
+					}
+,
+					"text" : "node.script index.js @autostart 1 @watch 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "start" ],
-					"patching_rect" : [ 355.0, 567.0, 39.0, 22.0 ],
+					"patching_rect" : [ 290.0, 522.0, 39.0, 22.0 ],
 					"text" : "t start"
 				}
 
@@ -99,8 +119,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 80.0, 372.0, 107.0, 22.0 ],
-					"text" : "prepend loadscala"
+					"patching_rect" : [ 80.0, 327.0, 109.0, 22.0 ],
+					"text" : "prepend loadScala"
 				}
 
 			}
@@ -207,7 +227,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 201.0, 237.0, 22.0, 22.0 ],
+					"patching_rect" : [ 201.0, 222.0, 22.0, 22.0 ],
 					"text" : "t b"
 				}
 
@@ -219,7 +239,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 201.0, 207.0, 73.0, 22.0 ],
+					"patching_rect" : [ 201.0, 192.0, 73.0, 22.0 ],
 					"text" : "r #0_start"
 				}
 
@@ -230,20 +250,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 355.0, 600.0, 75.0, 22.0 ],
+					"patching_rect" : [ 290.0, 555.0, 75.0, 22.0 ],
 					"text" : "s #0_start"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 165.0, 522.0, 76.0, 22.0 ],
-					"text" : "route umenu"
 				}
 
 			}
@@ -255,7 +263,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 165.0, 657.0, 30.0, 30.0 ]
+					"patching_rect" : [ 100.0, 522.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -266,7 +274,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 266.0, 522.0, 99.0, 22.0 ],
+					"patching_rect" : [ 201.0, 477.0, 99.0, 22.0 ],
 					"text" : "route stdout start"
 				}
 
@@ -302,7 +310,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 201.0, 270.0, 200.0, 22.0 ],
+					"patching_rect" : [ 201.0, 255.0, 200.0, 22.0 ],
 					"text" : "patcherargs @tune 440 @center 69"
 				}
 
@@ -355,20 +363,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 266.0, 567.0, 77.0, 22.0 ],
+					"patching_rect" : [ 201.0, 522.0, 77.0, 22.0 ],
 					"text" : "print th.scala"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 221.0, 432.0, 64.0, 22.0 ],
-					"text" : "script start"
 				}
 
 			}
@@ -379,8 +375,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 45.0, 432.0, 108.0, 22.0 ],
-					"text" : "prepend readscala"
+					"patching_rect" : [ 45.0, 432.0, 110.0, 22.0 ],
+					"text" : "prepend readScala"
 				}
 
 			}
@@ -391,7 +387,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 45.0, 402.0, 133.0, 22.0 ],
+					"patching_rect" : [ 45.0, 360.0, 133.0, 22.0 ],
 					"text" : "conformpath slash boot"
 				}
 
@@ -428,14 +424,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 45.0, 477.0, 240.0, 22.0 ],
+					"patching_rect" : [ 45.0, 477.0, 74.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"autostart" : 1,
-						"defer" : 0,
-						"watch" : 1
+						"filename" : "th.scala.js",
+						"parameter_enable" : 0
 					}
 ,
-					"text" : "node.script index.js @autostart 1 @watch 1"
+					"text" : "js th.scala.js"
 				}
 
 			}
@@ -550,14 +545,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-2", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
+					"destination" : [ "obj-14", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -565,15 +553,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
-					"order" : 1,
-					"source" : [ "obj-20", 0 ]
+					"source" : [ "obj-2", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"order" : 0,
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -587,15 +573,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"source" : [ "obj-23", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"source" : [ "obj-23", 0 ]
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-25", 1 ]
 				}
 
 			}
@@ -666,13 +645,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-8", 0 ]
 				}
 
 			}

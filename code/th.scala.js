@@ -7,9 +7,14 @@
 // written by Timo Hoogland 2020, www.timohoogland.com, MIT License
 // 
 
+var root = this.patcher.filepath.split("/");
+root = root.slice(0, root.length-2).join("/");
+
 autowatch = 1;
 inlets = 1;
-outlets = 1;
+outlets = 2;
+
+var sclMenu = {};
 
 var scl = {
 	'description' : '',
@@ -20,12 +25,18 @@ var scl = {
 	'cents' : [ 0 ]
 };
 
+// mapping functionnames for outside methods
+var getmenu = loadFiles;
+var getchart = getChart;
+var tune = setTune;
+var center = setCenter;
+
 function setTune(v){
 	if (isNaN(Number(v))){
 		error(v + ' is not a number \n');
 	} else {
 		scl.tune = v;
-		getScale();
+		getScala();
 	}
 }
 
@@ -34,33 +45,73 @@ function setCenter(v){
 		error(v + ' is not a number \n');
 	} else {
 		scl.center = v;
-		getScale();
+		getScala();
 	}
 }
 
 function readScala(f){
 	scl = parseScala(f);
-	getScale();
+	getScala();
+}
+
+function loadScala(f){
+	if (sclMenu[f]){
+		scl = parseScala(sclMenu[f]);
+		getScala();
+	}
 }
 
 function formatDict(o){
+	// new dictionary
 	var d = new Dict();
+	// stringify the object and parse to dict
 	d.parse(JSON.stringify(o));
+	// output dictionary name for [dict] object in Max
 	return ["dictionary", d.name];
 }
 formatDict.local = 1;
 
-function getScale(){
+function getScala(){
 	outlet(0, formatDict(scl));
 }
 
+function getChart(){
+	outlet(0, "chart", formatDict(frequencyChart(0, 127)));
+}
+
+function loadFiles(){
+	var p = root + "/code/scl/";
+	var f = new Folder(p);
+	f.reset();
+
+	// empty the umenu
+	outlet(1, "clear");
+	// for all the files
+	while (!f.end) {
+		if (f.filename.match(/^.+.scl$/)){
+			// store filename and path in dictionary
+			sclMenu[f.filename] = p + f.filename;
+			// add items to the umenu
+			outlet(1, "append", f.filename);
+		}
+		f.next();
+	}
+	f.close();
+	outlet(1, "done");
+}
+
 function parseScala(path){
+	if (!path.match(/.+.scl$/)){
+		error(path + " is not a .scl file \n");
+		return scl;
+	}
+
 	var load = new File(path);
 	// read the file text in variable
 	var file = load.readchars(load.eof).join("");
 	// remove linebreaks and split into array of lines
-	file = file.replace(/(\r\n|\n\r|\r|\n)/g, "\n").split("\n");
-	// post('@file', txt);
+	// file = file.replace(/(\r\n|\n\r|\r|\n)/g, "\n").split("\n");
+	post('@file', file, "\n");
 
 	// empty cents array in dictionary
 	scl.cents = [ 0 ];
@@ -130,24 +181,26 @@ function ratioToCent(ratio){
 }
 ratioToCent.local = 1;
 
-function frequencyChart(scl, tune, midi, hi, lo){
+function frequencyChart(hi, lo){
 	// swap lo and hi range if hi is smaller than lo
 	if (hi < lo){ var t=hi, hi=lo, lo=t; }
-	var range = hi - lo;
+	var len = hi - lo;
 
-	// get cents, scale-size, "octave" range
-	var cnts = scl.cents;
-	var nts = scl.size;
-	var oct = scl.octave;
+	// get data from object
+	var cents = scl.cents;
+	var size = scl.size;
+	var range = scl.range;
+	var tune = scl.tune;
+	var midi = scl.center;
 	
 	// empty object for frequencies
 	var chart = {};
 	
 	// calculate frequencies for values 0 to 127
-	for (var i=0; i<range+1; i++){
+	for (var i=0; i<len+1; i++){
 		var n = i - midi + lo;
-		var o = Math.floor(n / nts) * oct;
-		var c = cnts[((n % nts) + nts) % nts];
+		var o = Math.floor(n / size) * range;
+		var c = cents[((n % size) + size) % size];
 
 		chart[i + lo] = Math.pow(2, (c + o) / 1200) * tune;
 	}

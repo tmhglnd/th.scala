@@ -150,6 +150,18 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 119.0, 210.0, 58.0, 22.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
@@ -1351,7 +1363,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "", "start" ],
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 315.0, 265.0, 22.0 ],
 									"text" : "th.scala myTuningName @tune 440 @center 69"
 								}
@@ -1437,6 +1449,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-14", 0 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
 									"midpoints" : [ 329.5, 566.0, 16.75, 566.0, 16.75, 304.0, 39.5, 304.0 ],
 									"source" : [ "obj-29", 0 ]
@@ -1468,14 +1487,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
 									"source" : [ "obj-45", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-14", 0 ],
-									"midpoints" : [ 285.5, 384.0, 6.0, 384.0, 6.0, 172.0, 128.5, 172.0 ],
-									"source" : [ "obj-5", 0 ]
 								}
 
 							}
@@ -1689,6 +1700,13 @@
 				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "th.scala.js",
+				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
