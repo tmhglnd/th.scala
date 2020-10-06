@@ -110,8 +110,8 @@ function parseScala(path){
 	// read the file text in variable
 	var file = load.readchars(load.eof).join("");
 	// remove linebreaks and split into array of lines
-	// file = file.replace(/(\r\n|\n\r|\r|\n)/g, "\n").split("\n");
-	post('@file', file, "\n");
+	file = file.replace(/(\r\n|\n\r|\r|\n)/g, "\n").split("\n");
+	// post('@file', file, "\n");
 
 	// empty cents array in dictionary
 	scl.cents = [ 0 ];
