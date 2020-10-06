@@ -2,9 +2,14 @@
 const scl = require('./scala.js');
 const max = require('max-api');
 
+let menu = {};
 let scala = {};
 
 const handlers = {
+	'loadscala' : (f) => {
+		scala = scl.parseScala(menu[f]);
+		max.outlet(scala);
+	},
 	'readscala' : (f) => {
 		scala = scl.parseScala(f);
 		max.outlet(scala);
@@ -12,10 +17,11 @@ const handlers = {
 	'getmenu' : () => {
 		max.outlet('umenu', 'clear');
 
-		let menu = scl.loadFiles('scl');
-		menu.forEach((m) => {
-			max.outlet('umenu', 'append', m);
+		menu = scl.loadFiles('scl');
+		Object.keys(menu).forEach((k) => {
+			max.outlet('umenu', 'append', k);
 		});
+		max.outlet('umenu', 'done');
 	},
 	'tune' : (v) => {
 		if (isNaN(Number(v))){

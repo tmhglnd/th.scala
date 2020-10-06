@@ -7,13 +7,13 @@ const path = require('path');
 // for 12-TET tuning this would be A = 440Hz and A = midinote 69
 // or equivalent to this is also C = 261.63Hz and C = midinote 60
 
-let scl = { 
+let scl = {
 	'description' : '',
 	'size' : 1,
-	'cents' : [ 0 ],
-	'range' : 1200,
 	'tune' : 440,
-	'center' : 69
+	'center' :  69,
+	'range' : 1200,
+	'cents' : [ 0 ]
 };
 
 let sclDict = {};
@@ -30,26 +30,29 @@ exports.setCenter = setCenter;
 
 function loadFiles(fold){
 	let files = fg.sync(fold+"/**/*.scl", { extglob: true });
-	let names = [];
+	// let names = [];
 
 	files.forEach((f) => {
 		let file = path.parse(f);
 		sclDict[file.name] = f;
-		names.push(file.name);
+		// names.push(file.name);
 	});
-	return names;
+	return sclDict;
 }
 exports.loadFiles = loadFiles;
 
 function parseScala(f){
+	// read the file text in variable
 	let file = fs.readFileSync(f, 'utf8');
-	
 	// remove linebreaks and split into array of lines
 	file = file.replace(/(\r\n|\n\r|\r|\n)/g, '\n').split('\n');
 	// console.log('@file', file);
 
+	// empty cents array in dictionary
+	scl.cents = [ 0 ];
+	// init line number and note count
 	let l = 0, n = 0;
-
+	// iterate through lines
 	for (var i=0; i<file.length; i++){
 		let line = file[i];
 
