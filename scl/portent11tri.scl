@@ -1,0 +1,19 @@
+! portent11tri.scl
+!
+Portent tempered scale with trivalence proprty, 190et tuning, abababababc
+! Consonant class scale 5/4 6/5 7/6 5/4 6/5 5/4 7/6 6/5 5/4 6/5 7/6
+! x^11-41*x^9-122*x^8+16*x^7+406*x^6+306*x^5-304*x^4-386*x^3-40*x^2+44*x; algcon = 5.753
+!
+11
+!
+151.57895
+233.68421
+385.26316
+467.36842
+618.94737
+701.05263
+852.63158
+934.73684
+966.31579
+1117.89474
+2/1
