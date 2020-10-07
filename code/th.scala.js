@@ -31,6 +31,10 @@ var getchart = getChart;
 var tune = setTune;
 var center = setCenter;
 
+function loadbang(){
+	loadFiles();
+}
+
 function setTune(v){
 	if (isNaN(Number(v))){
 		error(v + ' is not a number \n');
@@ -80,7 +84,7 @@ function getChart(){
 }
 
 function loadFiles(){
-	var p = root + "/code/scl/";
+	var p = root + "/scl/";
 	var f = new Folder(p);
 	f.reset();
 
@@ -105,10 +109,19 @@ function parseScala(path){
 		error(path + " is not a .scl file \n");
 		return scl;
 	}
-
+	// import file and open
 	var load = new File(path);
-	// read the file text in variable
-	var file = load.readchars(load.eof).join("");
+	load.open();
+	
+	// read the file textbytes into variable array
+	var f = load.readbytes(load.eof);
+	// iterate over bytes and convert to signle character string
+	var file = "";
+	for (var c=0; c<f.length; c++){
+		file += String.fromCharCode(f[c]);
+	}
+	// post('@file', file);
+
 	// remove linebreaks and split into array of lines
 	file = file.replace(/(\r\n|\n\r|\r|\n)/g, "\n").split("\n");
 	// post('@file', file, "\n");
