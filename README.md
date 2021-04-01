@@ -2,7 +2,7 @@
 
 A set of abstractions that allow you to import scala (.scl) files and convert note-numbers to frequencies in data or signal domain.
 
-## IF YOU MAKE USE OF MY CODE ON A REGULAR BASIS**
+## IF YOU MAKE USE OF MY CODE ON A REGULAR BASIS
 
 **Consider to [name a fair price](http://gumroad.com/tmhglnd)**
 
