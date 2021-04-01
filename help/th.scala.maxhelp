@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 147.0, 169.0, 869.0, 611.0 ],
+		"rect" : [ 243.0, 188.0, 869.0, 611.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 147.0, 195.0, 869.0, 585.0 ],
+						"rect" : [ 0.0, 26.0, 869.0, 585.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -105,7 +105,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 525.0, 60.0, 150.0, 20.0 ],
-									"presentation_linecount" : 2,
 									"text" : "creat the object as follows:",
 									"textcolor" : [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ]
 								}
@@ -119,7 +118,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 240.0, 405.0, 122.0, 33.0 ],
-									"presentation_linecount" : 2,
 									"text" : "works with velocity similar to kslider",
 									"textcolor" : [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ]
 								}
@@ -182,7 +180,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 345.0, 195.0, 75.0, 33.0 ],
-									"presentation_linecount" : 2,
 									"text" : "set velocity (cold-inlet)"
 								}
 
@@ -266,7 +263,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 240.0, 441.5, 105.0, 20.0 ],
-									"presentation_linecount" : 2,
 									"text" : "velocity (0 - 127)"
 								}
 
@@ -843,7 +839,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
-									"outlettype" : [ "count" ],
+									"outlettype" : [ "int" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
@@ -1475,7 +1471,6 @@
 					}
 ,
 					"patching_rect" : [ 68.0, 229.0, 66.0, 22.0 ],
-					"presentation_linecount" : 3,
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1566,7 +1561,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 869.0, 585.0 ],
+						"rect" : [ 243.0, 214.0, 869.0, 585.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1968,7 +1963,6 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
-										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-9",
@@ -3411,8 +3405,8 @@
 			}
 , 			{
 				"name" : "th.sslider.js",
-				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/dev",
-				"patcherrelativepath" : "../dev",
+				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/code",
+				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

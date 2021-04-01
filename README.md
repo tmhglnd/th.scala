@@ -12,7 +12,7 @@ A set of abstractions that allow you to import scala (.scl) files and convert no
 
 ## About
 
-![](media/screenshot.png)
+![](media/screenshot2.png)
 
 ## Contains
 
@@ -27,6 +27,10 @@ Convert a number from scala scale-format to the corresponding frequency based on
 - **th.stof~**
 
 Similar as the `[th.stof]` object, except it works in the signal domain.
+
+- **th.sslider.js**
+
+A custom *jsui* file that shows a kslider-like object to allow for playing with the custom tuning files. The keys are displayed side-by-side (no black keys), and their width denote the relative interval. A light-gray key denotes the octaves. The sslider works with velocity as well and in `mode 2` it behaves as touchscreen (generating note-off). Unsupported yet is polyphonic mode.
 
 ## Install
 
