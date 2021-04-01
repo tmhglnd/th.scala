@@ -5,15 +5,17 @@
 // MIT License
 // 
 // A Keyslider for alternative tunings from Scala .scl
-// Works together with the th.scala/th.stof/th.stof~ objects
-// Keys are placed side-by-side (no black keys)
-// Octaves are marked with light-grey
+// - Works together with the th.scala/th.stof/th.stof~ objects
+// - Keys are placed side-by-side (no black keys)
+// - Octaves are marked with light-grey
+// - Width of key denotes distance in cents of tuning
 // 
 // Similar as kslider:
 // - height of clicking (vertical) determines velocity output
 // - velocity can be set on right cold inlet
 // - key value can be set on left hot inlet
-// 
+// - set range of displayed keys
+// - set offset of starting key value
 // ===========================================================
 
 inlets = 2;
@@ -36,7 +38,7 @@ box.rect[3] = box.rect[1] + 50;
 // monophonic / touchscreen (to-do: polyphonic)
 var _mode = 0;
 // key offset (lowest key value)
-var _offset = 36;
+var _offset = 48;
 // how many keys to display
 var keys = 25;
 
@@ -56,9 +58,11 @@ var scl = {
 }
 
 if (jsarguments.length > 1){
-	post('arguments', jsarguments, "\n");
+	// post('arguments', jsarguments, "\n");
 	var args = jsarguments;
 	
+	post('arguments', args[1], args[2], args[3], "\n");
+
 	dictionary(args[1]);
 	
 	// keys = (jsarguments[1] !== undefined)? jsarguments[1] : scl;
@@ -123,7 +127,7 @@ function Key(_k, _x, _w){
 		if (this.selected){
 			// mgraphics.set_source_rgba(.2, .2, .2, 1);
 			if (isClick){
-				mgraphics.set_source_rgba(0.254472, 0.559699, 0.984055, 1.);
+				mgraphics.set_source_rgba(0.110586, 0.843708, 0.221192, 1.);
 			} else {
 				mgraphics.set_source_rgba(0.278, 0.278, 0.278, 1.);
 			}
@@ -245,9 +249,9 @@ function onclick(x,y,but,cmd,shift,capslock,option,ctrl)
 	last_y = y;
 
 	// cache last key and velocity value
-	for (var k in keyObjects){
-		if (keyObjects[k].isOver(x, y)){
-			last_key = keyObjects[k].k;
+	for (var i in keyObjects){
+		if (keyObjects[i].isOver(x, y)){
+			last_key = keyObjects[i].k;
 		}
 	}
 	// last_key = toKey(x);
@@ -287,17 +291,18 @@ function ondrag(x,y,but,cmd,shift,capslock,option,ctrl)
 ondrag.local = 1;
 
 function onidle(x,y){
-	isClick = false;
-
-	if (_mode === 2){
-		last_vel = 0;
-		output();
-
-		for (var k in keyObjects){
-			keyObjects[k].selected = false;
+	if (isClick){
+		if (_mode === 2){
+			last_vel = 0;
+			output();
+			
+			for (var i in keyObjects){
+				keyObjects[i].selected = false;
+			}
 		}
 	}
 	mgraphics.redraw();
+	isClick = false;
 }
 onidle.local = 1;
 

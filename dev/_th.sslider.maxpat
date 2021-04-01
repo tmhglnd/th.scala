@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 81.0, 140.0, 824.0, 665.0 ],
+		"rect" : [ 445.0, 135.0, 424.0, 665.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -387,6 +387,21 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"filename" : "th.sslider.js",
+					"id" : "obj-12",
+					"jsarguments" : [ "tune", 30, 25 ],
+					"maxclass" : "jsui",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 10.0, 10.0, 336.0, 53.0 ],
+					"varname" : "sslider3002"
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -582,9 +597,16 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "th.sslider.js",
+				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/dev",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "th.scala.maxpat",
 				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/patchers",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -598,7 +620,7 @@
 , 			{
 				"name" : "th.stof.maxpat",
 				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/patchers",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
