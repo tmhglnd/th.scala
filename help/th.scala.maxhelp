@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 160.0, 193.0, 865.0, 625.0 ],
+		"rect" : [ 100.0, 100.0, 869.0, 611.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 865.0, 599.0 ],
+						"rect" : [ 0.0, 26.0, 869.0, 585.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -119,7 +119,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 160.0, 219.0, 865.0, 599.0 ],
+						"rect" : [ 100.0, 126.0, 869.0, 585.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -156,8 +156,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 700.0, 536.0, 140.0, 37.0 ],
-									"presentation_linecount" : 6,
+									"patching_rect" : [ 700.0, 518.0, 140.0, 37.0 ],
 									"text" : "scala files are downloaded from http://www.huygens-fokker.org/scala/downloads.html#scales"
 								}
 
@@ -339,23 +338,11 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-5",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 276.0, 345.0, 63.0, 22.0 ],
-									"text" : "route start"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-85",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 147.0, 535.0, 180.0, 20.0 ],
+									"patching_rect" : [ 147.0, 495.0, 180.0, 20.0 ],
 									"text" : "<- double-click to see the tuning"
 								}
 
@@ -367,7 +354,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 4,
 									"outlettype" : [ "dictionary", "", "", "" ],
-									"patching_rect" : [ 30.0, 535.0, 115.0, 22.0 ],
+									"patching_rect" : [ 30.0, 495.0, 115.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 0,
 										"parameter_enable" : 0,
@@ -888,7 +875,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 373.5, 347.0, 84.0, 20.0 ],
+									"patching_rect" : [ 346.0, 317.0, 84.0, 20.0 ],
 									"text" : "random scala"
 								}
 
@@ -901,7 +888,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 347.5, 345.0, 24.0, 24.0 ]
+									"patching_rect" : [ 320.0, 315.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -1211,7 +1198,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 320.0, 400.0, 86.0, 22.0 ],
+									"patching_rect" : [ 320.0, 360.0, 86.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -1304,7 +1291,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 335.0, 499.0, 123.0, 74.0 ],
+									"patching_rect" : [ 335.0, 459.0, 123.0, 74.0 ],
 									"text" : "use the load message to load a file from the included library based on the name only",
 									"textcolor" : [ 0.129411764705882, 0.129411764705882, 0.129411764705882, 1.0 ]
 								}
@@ -1317,7 +1304,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 320.0, 475.0, 79.0, 22.0 ],
+									"patching_rect" : [ 320.0, 435.0, 79.0, 22.0 ],
 									"text" : "prepend load"
 								}
 
@@ -1461,7 +1448,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 320.0, 430.0, 100.0, 22.0 ]
+									"patching_rect" : [ 320.0, 390.0, 100.0, 22.0 ]
 								}
 
 							}
@@ -1483,7 +1470,7 @@
 									"maxclass" : "dict.view",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.0, 400.0, 265.0, 127.0 ]
+									"patching_rect" : [ 30.0, 360.0, 265.0, 127.0 ]
 								}
 
 							}
@@ -1612,7 +1599,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-45", 1 ],
-									"midpoints" : [ 410.5, 462.0, 429.5, 462.0, 429.5, 389.0, 396.5, 389.0 ],
+									"midpoints" : [ 410.5, 422.0, 429.5, 422.0, 429.5, 349.0, 396.5, 349.0 ],
 									"source" : [ "obj-15", 2 ]
 								}
 
@@ -1641,7 +1628,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
-									"midpoints" : [ 329.5, 566.0, 16.75, 566.0, 16.75, 304.0, 39.5, 304.0 ],
+									"midpoints" : [ 329.5, 533.0, 16.75, 533.0, 16.75, 304.0, 39.5, 304.0 ],
 									"source" : [ "obj-29", 0 ]
 								}
 
@@ -1669,7 +1656,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 0 ],
+									"destination" : [ "obj-45", 0 ],
 									"source" : [ "obj-4", 1 ]
 								}
 
@@ -1678,13 +1665,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
 									"source" : [ "obj-45", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-45", 0 ],
-									"source" : [ "obj-5", 1 ]
 								}
 
 							}

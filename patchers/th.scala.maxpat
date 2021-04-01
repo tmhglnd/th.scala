@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 10,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 424.5, 702.0, 91.0, 22.0 ],
+					"patching_rect" : [ 424.5, 675.0, 91.0, 22.0 ],
 					"text" : "sprintf %s_data"
 				}
 
@@ -99,7 +99,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 80.0, 327.0, 109.0, 22.0 ],
+					"patching_rect" : [ 80.0, 300.0, 109.0, 22.0 ],
 					"text" : "prepend loadScala"
 				}
 
@@ -111,7 +111,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 221.0, 777.0, 66.0, 22.0 ],
+					"patching_rect" : [ 221.0, 750.0, 66.0, 22.0 ],
 					"text" : "listfunnel 0"
 				}
 
@@ -123,7 +123,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 318.0, 702.0, 55.0, 22.0 ],
+					"patching_rect" : [ 318.0, 675.0, 55.0, 22.0 ],
 					"text" : "zl.slice 1"
 				}
 
@@ -135,7 +135,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "", "clear" ],
-					"patching_rect" : [ 221.0, 612.0, 57.0, 22.0 ],
+					"patching_rect" : [ 221.0, 585.0, 57.0, 22.0 ],
 					"text" : "t b l clear"
 				}
 
@@ -147,7 +147,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 221.0, 747.0, 75.0, 22.0 ],
+					"patching_rect" : [ 221.0, 720.0, 75.0, 22.0 ],
 					"text" : "zl 512 group"
 				}
 
@@ -159,7 +159,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 221.0, 807.0, 111.0, 22.0 ],
+					"patching_rect" : [ 221.0, 780.0, 111.0, 22.0 ],
 					"text" : "peek~ #0_tuning"
 				}
 
@@ -171,7 +171,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 259.0, 840.0, 190.0, 22.0 ],
+					"patching_rect" : [ 259.0, 813.0, 190.0, 22.0 ],
 					"text" : "buffer~ #0_tuning @samps 512"
 				}
 
@@ -183,7 +183,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 240.0, 672.0, 97.0, 22.0 ],
+					"patching_rect" : [ 240.0, 645.0, 97.0, 22.0 ],
 					"text" : "route description"
 				}
 
@@ -195,7 +195,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 642.0, 47.0, 22.0 ],
+					"patching_rect" : [ 240.0, 615.0, 47.0, 22.0 ],
 					"text" : "dict.iter"
 				}
 
@@ -208,7 +208,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 100.0, 522.0, 30.0, 30.0 ]
+					"patching_rect" : [ 100.0, 495.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -219,7 +219,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 201.0, 372.0, 19.0, 22.0 ],
+					"patching_rect" : [ 201.0, 345.0, 19.0, 22.0 ],
 					"text" : "t l"
 				}
 
@@ -231,7 +231,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 201.0, 327.0, 175.0, 22.0 ],
+					"patching_rect" : [ 201.0, 300.0, 175.0, 22.0 ],
 					"text" : "routepass tune center getmenu"
 				}
 
@@ -243,7 +243,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 201.0, 270.0, 269.0, 22.0 ],
+					"patching_rect" : [ 201.0, 243.0, 269.0, 22.0 ],
 					"text" : "patcherargs #0_tuning @tune 440 @center 69"
 				}
 
@@ -255,7 +255,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 45.0, 270.0, 89.0, 22.0 ],
+					"patching_rect" : [ 45.0, 243.0, 89.0, 22.0 ],
 					"text" : "route read load"
 				}
 
@@ -267,7 +267,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 78.0, 612.0, 115.0, 22.0 ],
+					"patching_rect" : [ 78.0, 585.0, 115.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -285,7 +285,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 45.0, 567.0, 116.0, 22.0 ],
+					"patching_rect" : [ 45.0, 540.0, 116.0, 22.0 ],
 					"text" : "routepass dictionary"
 				}
 
@@ -297,7 +297,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 45.0, 432.0, 110.0, 22.0 ],
+					"patching_rect" : [ 45.0, 405.0, 110.0, 22.0 ],
 					"text" : "prepend readScala"
 				}
 
@@ -309,7 +309,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 45.0, 360.0, 133.0, 22.0 ],
+					"patching_rect" : [ 45.0, 333.0, 133.0, 22.0 ],
 					"text" : "conformpath slash boot"
 				}
 
@@ -323,7 +323,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 45.0, 192.0, 30.0, 30.0 ]
+					"patching_rect" : [ 45.0, 195.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -335,7 +335,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 45.0, 657.0, 30.0, 30.0 ]
+					"patching_rect" : [ 45.0, 630.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -346,7 +346,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 45.0, 477.0, 74.0, 22.0 ],
+					"patching_rect" : [ 45.0, 450.0, 74.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "th.scala.js",
 						"parameter_enable" : 0
@@ -363,7 +363,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 424.5, 777.0, 55.0, 22.0 ],
+					"patching_rect" : [ 424.5, 750.0, 55.0, 22.0 ],
 					"text" : "name $1"
 				}
 
@@ -375,7 +375,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 375.0, 747.0, 50.0, 22.0 ],
+					"patching_rect" : [ 375.0, 720.0, 50.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -412,7 +412,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 210.5, 302.5, 434.0, 302.5 ],
+					"midpoints" : [ 210.5, 275.5, 434.0, 275.5 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
