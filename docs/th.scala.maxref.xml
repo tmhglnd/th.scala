@@ -106,6 +106,7 @@
 
 	<!--SEEALSO-->
 	<seealsolist>
+		<seealso name="th.scala"/>
 		<seealso name="th.stof"/>
 		<seealso name="th.stof~"/>
 		<seealso name="th.ftomb"/>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.stof~">
+
+	<digest>
+		Convert a scala keyvalue to frequency at signal rate
+	</digest>
+
+	<description>
+		Convert a number from scala scale-format to the corresponding frequency based on the tune and center value. Use this object in combination with the th.scala to load your desired .scl scale-file. Use an argument to specify the name of the th.scala object to refer to. By default the output of th.stof is 12-TET
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">max</metadata>
+		<metadata name="tag">msp</metadata>
+		<metadata name="tag">scala</metadata>
+		<metadata name="tag">tuning</metadata>
+		<metadata name="tag">microtonal</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="int">
+			<digest>Scala keyvalue signal to be converted</digest>
+			<description>
+				Scala keyvalue signal to be converted
+			</description>
+		</inlet>
+		<!-- <inlet id="1" type="signal">
+			<digest></digest>
+			<description></description>
+		</inlet> -->
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="float">
+			<digest>Converted frequency signal</digest>
+			<description>
+				Converted frequency signal.
+			</description>
+		</outlet>
+	</outletlist>
+
+	<!-- ARGUMENTS-->
+	<objarglist>
+		<objarg name="name" optional="0" type="symbol">
+			<digest>
+				The name of the th.scala
+			</digest>
+			<description>
+				The first argument is a name from the th.scala object that is used to access the tuning for conversion.
+			</description>
+		</objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="signal">
+			<arglist>
+				<arg name="signal" optional="1" type="int" />
+			</arglist>
+			<digest>
+				A signal representing a scala keyvalue.
+			</digest>
+			<description>
+				A signal representing a scala keyvalue. The corresponding frequency is output as a signal.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<!-- <attribute name="" get='0' set='1' type='float' size='2'>
+			<digest>
+			</digest>
+			<description>
+			</description>
+		</attribute> -->
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="th.scala"/>
+		<seealso name="th.stof"/>
+		<seealso name="th.stof~"/>
+		<seealso name="th.ftomb"/>
+		<seealso name="th.ftomb~"/>
+		<seealso name="jsui"/>
+	</seealsolist>
+</c74object>
