@@ -1,6 +1,6 @@
 # th.scala
 
-A set of abstractions that allow you to import scala (.scl) files and convert note-numbers to frequencies in data or signal domain.
+A set of abstractions that allow you to explore alternative and microtonal tunings with MaxMSP. Import scala (.scl) files, display them on a custom keyslider (instead of the piano kslider) and convert note-numbers to frequencies in the data or signal domain.
 
 ## IF YOU MAKE USE OF MY CODE ON A REGULAR BASIS
 
