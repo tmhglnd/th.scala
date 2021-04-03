@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.scala">
+
+	<digest>
+		Explore alternative/microtonal tuning systems
+	</digest>
+
+	<description>
+		Import a scala scale-format file (.scl) and output a dictionary of the information from that file in JSON format. Use the loaded scale together with the th.stof object to play notes based on the tuning. Set the tune and center value separately with messages.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">max</metadata>
+		<metadata name="tag">msp</metadata>
+		<metadata name="tag">scala</metadata>
+		<metadata name="tag">tuning</metadata>
+		<metadata name="tag">microtonal</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="message">
+			<digest>Messages to th.scala</digest>
+			<description>
+				Send messages to th.scala
+			</description>
+		</inlet>
+		<!-- <inlet id="1" type="signal">
+			<digest></digest>
+			<description></description>
+		</inlet> -->
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="messages">
+			<digest>Scala dictionary output</digest>
+			<description>
+				Outputs the tuning in dictionary format.
+			</description>
+		</outlet>
+	</outletlist>
+
+	<!-- ARGUMENTS-->
+	<objarglist>
+		<objarg name="name" optional="0" type="symbol">
+			<digest>
+				The name of the scale to refer to.
+			</digest>
+			<description>
+				The first argument is a name used by other objects to refer to the th.scala to access its tuning.
+			</description>
+		</objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="read">
+			<arglist>
+				<arg name="read" optional="1" type="signal" />
+			</arglist>
+			<digest>
+				Read a scala scale file (.scl) from disk.
+			</digest>
+			<description>
+				Read a scala scale file (.scl) from disk.
+			</description>
+		</method>
+		<method name="getmenu">
+			<arglist>
+				<arg name="getmenu" optional="1" type="signal" />
+			</arglist>
+			<digest>
+				Output a list of scales to the second outlet in umenu format.
+			</digest>
+			<description>
+				Output a list of scales to the second outlet from the included database (from Stichting Huygens-Fokker) and set the contents in a umenu.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="tune" get='0' set='1' type='float' size='2'>
+			<digest>
+				Set the tuning base
+			</digest>
+			<description>
+				Set the tuning base for the reference frequency (default = 440).
+			</description>
+		</attribute>
+		<attribute name="center" get='0' set='1' type='float' size='2'>
+			<digest>
+				Set the keyvalue of the base frequency
+			</digest>
+			<description>
+				Set the keyvalue of the base frequency (default = 69).
+			</description>
+		</attribute>
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="th.stof"/>
+		<seealso name="th.stof~"/>
+		<seealso name="th.ftomb"/>
+		<seealso name="th.ftomb~"/>
+		<seealso name="jsui"/>
+	</seealsolist>
+</c74object>
