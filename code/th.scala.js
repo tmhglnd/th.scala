@@ -17,12 +17,12 @@ outlets = 2;
 var sclMenu = {};
 
 var scl = {
-	'description' : '',
-	'size' : 1,
-	'tune' : 440,
-	'center' :  69,
-	'range' : 1200,
-	'cents' : [ 0 ]
+	"description" : "12-TET or Tone Equal Temperatement divides an octave into 12 equal steps",
+	"size" : 12,
+	"tune" : 440,
+	"center" : 69,
+	"range" : 1200,
+	"cents" : [ 0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100 ]
 };
 
 // mapping functionnames for outside methods
