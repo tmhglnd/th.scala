@@ -1,8 +1,8 @@
 # th.scala
 
-A set of abstractions that allow you to explore alternative and microtonal tunings with MaxMSP. Import scala (.scl) files, display them on a custom keyslider (instead of the piano kslider) and convert note-numbers to frequencies in the data or signal domain.
+Explore alternative and microtonal tuning systems with this small package of abstractions for Max
 
-## IF YOU MAKE USE OF MY CODE ON A REGULAR BASIS
+## Support this project
 
 **Consider to [name a fair price](http://gumroad.com/tmhglnd)**
 
@@ -12,7 +12,9 @@ A set of abstractions that allow you to explore alternative and microtonal tunin
 
 ## About
 
-![](media/screenshot2.png)
+A set of abstractions that allow you to explore alternative and microtonal tunings with MaxMSP. Import scala (.scl) files, display them on a custom keyslider (instead of the piano kslider) and convert note-numbers to frequencies in the data or signal domain.
+
+![](media/screenshot3.png)
 
 ## Contains
 
