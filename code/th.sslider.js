@@ -127,7 +127,7 @@ function Key(_k, _x, _w){
 		if (this.selected){
 			// mgraphics.set_source_rgba(.2, .2, .2, 1);
 			if (isClick){
-				mgraphics.set_source_rgba(0.110586, 0.843708, 0.221192, 1.);
+				mgraphics.set_source_rgba(0.254472, 0.559699, 0.984055, 1.);
 			} else {
 				mgraphics.set_source_rgba(0.278, 0.278, 0.278, 1.);
 			}
