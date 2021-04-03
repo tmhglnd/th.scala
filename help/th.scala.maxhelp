@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 243.0, 188.0, 869.0, 611.0 ],
+		"rect" : [ 131.0, 148.0, 869.0, 611.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -106,7 +106,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 525.0, 60.0, 150.0, 20.0 ],
 									"text" : "creat the object as follows:",
-									"textcolor" : [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ]
+									"textcolor" : [ 0.309803921568627, 0.63921568627451, 0.988235294117647, 1.0 ]
 								}
 
 							}
@@ -119,7 +119,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 240.0, 405.0, 122.0, 33.0 ],
 									"text" : "works with velocity similar to kslider",
-									"textcolor" : [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ]
+									"textcolor" : [ 0.309803921568627, 0.63921568627451, 0.988235294117647, 1.0 ]
 								}
 
 							}
@@ -168,7 +168,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 390.0, 275.5, 105.0, 47.0 ],
 									"text" : "connect object to th.scala to send scale dictionary",
-									"textcolor" : [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ]
+									"textcolor" : [ 0.309803921568627, 0.63921568627451, 0.988235294117647, 1.0 ]
 								}
 
 							}
@@ -1358,7 +1358,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"color" : [ 0.253988713026047, 0.854062557220459, 0.370567917823792, 1.0 ],
+									"color" : [ 0.254472196102142, 0.559699296951294, 0.984054923057556, 1.0 ],
 									"destination" : [ "obj-5", 0 ],
 									"midpoints" : [ 534.5, 272.0, 39.5, 272.0 ],
 									"order" : 1,
@@ -1561,7 +1561,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 243.0, 214.0, 869.0, 585.0 ],
+						"rect" : [ 131.0, 174.0, 869.0, 585.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1591,6 +1591,161 @@
 						"showontab" : 1,
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-40",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 731.0, 428.0, 69.0, 20.0 ],
+									"text" : "See also:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-38",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 8,
+											"minor" : 1,
+											"revision" : 10,
+											"architecture" : "x64",
+											"modernui" : 1
+										}
+,
+										"classnamespace" : "box",
+										"rect" : [ 59.0, 103.0, 640.0, 480.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 1,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 1,
+										"objectsnaponopen" : 1,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"lefttoolbarpinned" : 0,
+										"toptoolbarpinned" : 0,
+										"righttoolbarpinned" : 0,
+										"bottomtoolbarpinned" : 0,
+										"toolbars_unpinned_last_save" : 0,
+										"tallnewobj" : 0,
+										"boxanimatetime" : 200,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"style" : "",
+										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
+										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-34",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 45.0, 126.0, 115.0, 22.0 ],
+													"text" : "prepend loadunique"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-30",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 45.0, 95.0, 110.0, 22.0 ],
+													"text" : "sprintf %s.maxhelp"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-12",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 45.0, 155.0, 51.0, 22.0 ],
+													"text" : "pcontrol"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-37",
+													"index" : 1,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 45.0, 45.0, 30.0, 30.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-34", 0 ],
+													"source" : [ "obj-30", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-12", 0 ],
+													"source" : [ "obj-34", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-30", 0 ],
+													"source" : [ "obj-37", 0 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 771.5, 481.5, 63.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"description" : "",
+										"digest" : "",
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p see also"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-28",
+									"items" : [ "th.scala", ",", "th.stof", ",", "th.stof~", ",", "th.ftomb", ",", "th.ftomb~" ],
+									"maxclass" : "umenu",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "int", "", "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 731.0, 450.0, 100.0, 22.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-36",
 									"maxclass" : "newobj",
@@ -1876,7 +2031,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 504.0, 145.0, 329.0, 33.0 ],
 									"text" : "this is a [jsui @filename th.sslider.js] object that displays the scala scale with interval width and highlighted octaves ",
-									"textcolor" : [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ]
+									"textcolor" : [ 0.309803921568627, 0.63921568627451, 0.988235294117647, 1.0 ]
 								}
 
 							}
@@ -3103,6 +3258,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-38", 0 ],
+									"source" : [ "obj-28", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
 									"midpoints" : [ 329.5, 533.0, 16.75, 533.0, 16.75, 304.0, 39.5, 304.0 ],
 									"source" : [ "obj-29", 0 ]
@@ -3161,7 +3323,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"color" : [ 0.253988713026047, 0.854062557220459, 0.370567917823792, 1.0 ],
+									"color" : [ 0.254472196102142, 0.559699296951294, 0.984054923057556, 1.0 ],
 									"destination" : [ "obj-5", 0 ],
 									"midpoints" : [ 39.5, 344.0, 478.0, 344.0, 478.0, 169.0, 504.5, 169.0 ],
 									"order" : 0,

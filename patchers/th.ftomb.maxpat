@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 103.0, 640.0, 480.0 ],
+		"rect" : [ 679.0, 220.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -236,7 +236,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 66.0, 345.0, 81.0, 22.0 ],
+					"patching_rect" : [ 55.5, 345.0, 81.0, 22.0 ],
 					"text" : "gen @t ftomb"
 				}
 
@@ -262,7 +262,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 66.0, 390.0, 30.0, 30.0 ]
+					"patching_rect" : [ 55.5, 390.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -275,7 +275,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 128.0, 390.0, 30.0, 30.0 ]
+					"patching_rect" : [ 117.5, 390.0, 30.0, 30.0 ]
 				}
 
 			}

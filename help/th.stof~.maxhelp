@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 107.0, 177.0, 729.0, 626.0 ],
+		"rect" : [ 100.0, 100.0, 729.0, 699.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 729.0, 600.0 ],
+						"rect" : [ 0.0, 26.0, 729.0, 673.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -119,7 +119,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 107.0, 203.0, 729.0, 600.0 ],
+						"rect" : [ 100.0, 126.0, 729.0, 673.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -150,15 +150,26 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 30.0, 195.0, 77.0, 22.0 ],
+									"text" : "loadmess 60"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-80",
 									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 368.0, 180.0, 209.0, 60.0 ],
-									"presentation_linecount" : 4,
+									"patching_rect" : [ 368.0, 240.0, 209.0, 60.0 ],
 									"text" : "this is a [jsui @filename th.sslider.js] object that displays the scala scale with interval width and highlighted octaves for ease of playing",
-									"textcolor" : [ 0.0, 0.854901960784314, 0.282352941176471, 1.0 ]
+									"textcolor" : [ 0.309803921568627, 0.63921568627451, 0.988235294117647, 1.0 ]
 								}
 
 							}
@@ -171,7 +182,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 30.0, 180.0, 314.0, 60.0 ]
+									"patching_rect" : [ 30.0, 240.0, 314.0, 60.0 ]
 								}
 
 							}
@@ -186,7 +197,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "float" ],
-									"patching_rect" : [ 234.0, 463.0, 56.0, 22.0 ],
+									"patching_rect" : [ 234.0, 523.0, 56.0, 22.0 ],
 									"sig" : 60.0
 								}
 
@@ -202,7 +213,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "float" ],
-									"patching_rect" : [ 294.0, 552.0, 56.0, 22.0 ],
+									"patching_rect" : [ 294.0, 612.0, 56.0, 22.0 ],
 									"sig" : 0.0
 								}
 
@@ -218,7 +229,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "float" ],
-									"patching_rect" : [ 234.0, 552.0, 56.0, 22.0 ],
+									"patching_rect" : [ 234.0, 612.0, 56.0, 22.0 ],
 									"sig" : 0.0
 								}
 
@@ -230,7 +241,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 90.0, 420.0, 81.0, 22.0 ],
+									"patching_rect" : [ 90.0, 480.0, 81.0, 22.0 ],
 									"text" : "loadmess -24"
 								}
 
@@ -246,7 +257,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "float" ],
-									"patching_rect" : [ 82.0, 355.0, 56.0, 22.0 ],
+									"patching_rect" : [ 90.0, 415.0, 56.0, 22.0 ],
 									"sig" : 0.0
 								}
 
@@ -598,7 +609,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 30.0, 420.0, 47.0, 22.0 ],
+									"patching_rect" : [ 30.0, 480.0, 47.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -617,7 +628,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 30.0, 285.0, 31.0, 22.0 ],
+									"patching_rect" : [ 30.0, 345.0, 31.0, 22.0 ],
 									"text" : "sig~"
 								}
 
@@ -629,7 +640,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 538.0, 255.0, 167.0, 33.0 ],
+									"patching_rect" : [ 538.0, 315.0, 167.0, 33.0 ],
 									"text" : "< loads a scala file (see the help-file for more details)"
 								}
 
@@ -641,7 +652,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 486.0, 355.0, 62.0, 22.0 ],
+									"patching_rect" : [ 486.0, 415.0, 62.0, 22.0 ],
 									"text" : "t getmenu"
 								}
 
@@ -653,7 +664,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 30.0, 315.0, 136.0, 22.0 ],
+									"patching_rect" : [ 30.0, 375.0, 136.0, 22.0 ],
 									"text" : "th.stof~ myTuningName"
 								}
 
@@ -665,7 +676,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 234.0, 420.0, 77.0, 22.0 ],
+									"patching_rect" : [ 234.0, 480.0, 77.0, 22.0 ],
 									"text" : "loadmess 60"
 								}
 
@@ -677,7 +688,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 354.0, 500.0, 156.0, 74.0 ],
+									"patching_rect" : [ 354.0, 560.0, 156.0, 74.0 ],
 									"text" : "default th.stof~ is the same as the [mtof~] object\n\nbasically it loads a 12-TET tuning by default"
 								}
 
@@ -689,7 +700,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 294.0, 511.0, 39.0, 22.0 ],
+									"patching_rect" : [ 294.0, 571.0, 39.0, 22.0 ],
 									"text" : "mtof~"
 								}
 
@@ -701,7 +712,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 234.0, 511.0, 48.0, 22.0 ],
+									"patching_rect" : [ 234.0, 571.0, 48.0, 22.0 ],
 									"text" : "th.stof~"
 								}
 
@@ -713,7 +724,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 514.0, 300.0, 63.0, 22.0 ],
+									"patching_rect" : [ 514.0, 360.0, 63.0, 22.0 ],
 									"text" : "route start"
 								}
 
@@ -724,7 +735,7 @@
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.0, 529.0, 45.0, 45.0 ]
+									"patching_rect" : [ 30.0, 589.0, 45.0, 45.0 ]
 								}
 
 							}
@@ -738,7 +749,7 @@
 									"orientation" : 1,
 									"outlettype" : [ "signal", "signal", "", "float", "list" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 30.0, 463.0, 129.0, 47.0 ],
+									"patching_rect" : [ 30.0, 523.0, 129.0, 47.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_longname" : "live.gain~",
@@ -761,7 +772,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 624.5, 302.0, 84.0, 20.0 ],
+									"patching_rect" : [ 624.5, 362.0, 84.0, 20.0 ],
 									"text" : "random scala"
 								}
 
@@ -774,7 +785,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 598.5, 300.0, 24.0, 24.0 ]
+									"patching_rect" : [ 598.5, 360.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -785,7 +796,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 172.5, 300.0, 150.0, 33.0 ],
+									"patching_rect" : [ 172.5, 360.0, 150.0, 33.0 ],
 									"text" : "use a name argument to refer to the th.scala object",
 									"textcolor" : [ 0.129411764705882, 0.129411764705882, 0.129411764705882, 1.0 ]
 								}
@@ -1009,7 +1020,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 558.0, 355.0, 86.0, 22.0 ],
+									"patching_rect" : [ 558.0, 415.0, 86.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -1028,7 +1039,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 82.0, 255.0, 165.0, 33.0 ],
+									"patching_rect" : [ 82.0, 315.0, 165.0, 33.0 ],
 									"text" : "value (with 12-TET this can be equivalent to MIDI)",
 									"textcolor" : [ 0.129411764705882, 0.129411764705882, 0.129411764705882, 1.0 ]
 								}
@@ -1040,7 +1051,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 140.0, 355.0, 89.0, 20.0 ],
+									"patching_rect" : [ 148.0, 415.0, 89.0, 20.0 ],
 									"text" : "frequency (Hz)",
 									"textcolor" : [ 0.129411764705882, 0.129411764705882, 0.129411764705882, 1.0 ]
 								}
@@ -1054,7 +1065,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 30.0, 255.0, 50.0, 22.0 ]
+									"patching_rect" : [ 30.0, 315.0, 50.0, 22.0 ]
 								}
 
 							}
@@ -1065,7 +1076,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 598.5, 420.0, 79.0, 22.0 ],
+									"patching_rect" : [ 598.5, 480.0, 79.0, 22.0 ],
 									"text" : "prepend load"
 								}
 
@@ -1152,7 +1163,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 495.0, 113.0, 38.0, 22.0 ],
+									"patching_rect" : [ 514.0, 113.0, 38.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -1171,7 +1182,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 535.0, 83.0, 90.0, 47.0 ],
+									"patching_rect" : [ 554.0, 83.0, 90.0, 47.0 ],
 									"text" : "more info on huygens-fokker.org/scala"
 								}
 
@@ -1184,7 +1195,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 495.0, 83.0, 24.0, 24.0 ]
+									"patching_rect" : [ 514.0, 83.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -1197,7 +1208,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 558.0, 385.0, 100.0, 22.0 ]
+									"patching_rect" : [ 558.0, 445.0, 100.0, 22.0 ]
 								}
 
 							}
@@ -1208,7 +1219,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 396.0, 255.0, 137.0, 22.0 ],
+									"patching_rect" : [ 396.0, 315.0, 137.0, 22.0 ],
 									"text" : "th.scala myTuningName"
 								}
 
@@ -1229,11 +1240,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-88",
-									"linecount" : 4,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.0, 105.0, 495.0, 60.0 ],
+									"patching_rect" : [ 30.0, 105.0, 435.0, 74.0 ],
 									"text" : "Similar as th.stof, but for signals. Convert a number from scala scale-format to the corresponding frequency based on the tune and center value. Use this object in combination with the th.scala to load your desired .scl scale-file. Use an argument to specify the name of the th.scala object to refer to. By default the output of th.stof is 12-TET",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
@@ -1264,6 +1275,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-33", 0 ],
 									"source" : [ "obj-11", 0 ]
 								}
@@ -1286,7 +1304,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-45", 1 ],
-									"midpoints" : [ 648.5, 417.0, 667.5, 417.0, 667.5, 344.0, 634.5, 344.0 ],
+									"midpoints" : [ 648.5, 477.0, 667.5, 477.0, 667.5, 404.0, 634.5, 404.0 ],
 									"source" : [ "obj-15", 2 ]
 								}
 
@@ -1308,7 +1326,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
-									"midpoints" : [ 608.0, 453.0, 375.75, 453.0, 375.75, 244.0, 405.5, 244.0 ],
+									"midpoints" : [ 608.0, 513.0, 375.75, 513.0, 375.75, 304.0, 405.5, 304.0 ],
 									"source" : [ "obj-29", 0 ]
 								}
 
@@ -1346,16 +1364,16 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
-									"midpoints" : [ 495.5, 389.0, 389.5, 389.0, 389.5, 244.0, 405.5, 244.0 ],
+									"midpoints" : [ 495.5, 449.0, 389.5, 449.0, 389.5, 304.0, 405.5, 304.0 ],
 									"source" : [ "obj-34", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"color" : [ 0.261249899864197, 0.855183780193329, 0.32468968629837, 1.0 ],
+									"color" : [ 0.254472196102142, 0.559699296951294, 0.984054923057556, 1.0 ],
 									"destination" : [ "obj-1", 0 ],
-									"midpoints" : [ 405.5, 287.0, 356.5, 287.0, 356.5, 169.0, 39.5, 169.0 ],
+									"midpoints" : [ 405.5, 347.0, 356.5, 347.0, 356.5, 229.0, 39.5, 229.0 ],
 									"source" : [ "obj-4", 0 ]
 								}
 
@@ -1554,8 +1572,8 @@
 			}
 , 			{
 				"name" : "th.sslider.js",
-				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/dev",
-				"patcherrelativepath" : "../dev",
+				"bootpath" : "~/Documents/Max 7/Library/abstractions/th.scala/code",
+				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
