@@ -571,18 +571,6 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-8",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 120.0, 165.0, 77.0, 22.0 ],
-									"text" : "loadmess 60"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-7",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
@@ -1444,13 +1432,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-1", 0 ],
 									"source" : [ "obj-7", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"source" : [ "obj-8", 0 ]
 								}
 
 							}
