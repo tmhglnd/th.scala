@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.ftomb~">
+
+	<digest>
+		Convert frequency to MIDI note and Pitch Bend at signal rate
+	</digest>
+
+	<description>
+		Convert a frequency to a MIDI note number and a pitch bend value between 0 and 127 at signal rate. Optionally set the hires attribute to 1 to output floating-point pitch bend values. Combine this object with bendout and noteout, or use it with the midiformat object.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">max</metadata>
+		<metadata name="tag">msp</metadata>
+		<metadata name="tag">scala</metadata>
+		<metadata name="tag">tuning</metadata>
+		<metadata name="tag">microtonal</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="int">
+			<digest>Frequency signal to be converted</digest>
+			<description>
+				Frequency signal to be converted
+			</description>
+		</inlet>
+		<!-- <inlet id="1" type="signal">
+			<digest></digest>
+			<description></description>
+		</inlet> -->
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="int">
+			<digest>Converted MIDI note signal</digest>
+			<description>
+				Converted MIDI note signal.
+			</description>
+		</outlet>
+		<outlet id="1" type="float">
+			<digest>Converted Pitch Bend signal</digest>
+			<description>
+				Converted Pitch Bend signal.
+			</description>
+		</outlet>
+	</outletlist>
+
+	<!-- ARGUMENTS-->
+	<objarglist>
+		<!-- <objarg name="name" optional="0" type="symbol">
+			<digest>
+				The name of the th.scala
+			</digest>
+			<description>
+				The first argument is a name from the th.scala object that is used to access the tuning for conversion.
+			</description>
+		</objarg> -->
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="signal">
+			<arglist>
+				<arg name="signal" optional="1" type="float" />
+			</arglist>
+			<digest>
+				Frequency signal to be converted.
+			</digest>
+			<description>
+				Frequency signal to be converted.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="hires" get='0' set='1' type='int' size='2'>
+			<digest>
+				High-resolution Pitch Bend.
+			</digest>
+			<description>
+				High-resolution pitch bend values.
+				<br />
+				<br />
+				hires 0: Pitch bend values are output as integers within the range of 0 to 127, where: 64 = no bend, 96 = +1 semitone, 32 = -1 semitone.
+				<br />
+				<br />
+				hires 1: Pitch bend values are output as floatingpoint within the range of -1 to 1, where: 0 = no bend, 0.5 = +1 semitone, -0.5 = -1 semitone.
+			</description>
+		</attribute>
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="th.scala"/>
+		<seealso name="th.stof"/>
+		<seealso name="th.stof~"/>
+		<seealso name="th.ftomb"/>
+		<seealso name="th.ftomb~"/>
+		<seealso name="jsui"/>
+	</seealsolist>
+</c74object>
