@@ -7,9 +7,6 @@
 // written by Timo Hoogland 2020, www.timohoogland.com, MIT License
 // 
 
-var root = this.patcher.filepath.split("/");
-root = root.slice(0, root.length-2).join("/");
-
 autowatch = 1;
 inlets = 1;
 outlets = 2;
@@ -84,7 +81,12 @@ function getChart(){
 }
 
 function loadFiles(){
-	var p = root + "/scl/";
+	var root = this.patcher.filepath.split("/");
+	root = root.slice(0, root.length-2).join("/");
+	// post('root folder', root, "\n");
+
+	var p = root + "/scl";
+	// post('scl folder', p, "\n");
 	var f = new Folder(p);
 	f.reset();
 
@@ -94,7 +96,7 @@ function loadFiles(){
 	while (!f.end) {
 		if (f.filename.match(/^.+.scl$/)){
 			// store filename and path in dictionary
-			sclMenu[f.filename] = p + f.filename;
+			sclMenu[f.filename] = p + "/" + f.filename;
 			// add items to the umenu
 			outlet(1, "append", f.filename);
 		}
@@ -109,18 +111,22 @@ function parseScala(path){
 		error(path + " is not a .scl file \n");
 		return scl;
 	}
+	// post('loading', path, "\n");
+			
 	// import file and open
-	var load = new File(path);
-	load.open();
-	
-	// read the file textbytes into variable array
-	var f = load.readbytes(load.eof);
-	// iterate over bytes and convert to signle character string
-	var file = "";
-	for (var c=0; c<f.length; c++){
-		file += String.fromCharCode(f[c]);
+	var f = new File(path);
+		
+	// iterate over chars and add signle character to string
+	if (f.isopen){
+		c = f.eof;
+		var file = "";
+		for (var i=0; i<c; i++){
+			var a = f.readchars(1);
+			file += a;
+		}
+		f.close();
 	}
-	// post('@file', file);
+	// post('@file', file, "\n");
 
 	// remove linebreaks and split into array of lines
 	file = file.replace(/(\r\n|\n\r|\r|\n)/g, "\n").split("\n");

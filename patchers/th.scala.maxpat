@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 10,
+			"minor" : 2,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -219,7 +219,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 201.0, 345.0, 19.0, 22.0 ],
+					"patching_rect" : [ 216.0, 345.0, 19.0, 22.0 ],
 					"text" : "t l"
 				}
 
@@ -231,7 +231,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 201.0, 300.0, 175.0, 22.0 ],
+					"patching_rect" : [ 216.0, 300.0, 175.0, 22.0 ],
 					"text" : "routepass tune center getmenu"
 				}
 
