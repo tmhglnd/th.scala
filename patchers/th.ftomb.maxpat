@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 10,
+			"minor" : 2,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -45,8 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 97.5, 203.0, 188.0, 22.0 ],
-					"text" : "patcherargs @hires 0 @base 440"
+					"patching_rect" : [ 97.5, 203.0, 254.0, 22.0 ],
+					"text" : "patcherargs @hires 0 @base 440 @center 69"
 				}
 
 			}
@@ -54,11 +54,11 @@
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 97.5, 300.0, 120.0, 22.0 ],
-					"text" : "routepass hires base"
+					"numinlets" : 4,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 97.5, 300.0, 157.0, 22.0 ],
+					"text" : "routepass hires base center"
 				}
 
 			}
@@ -127,14 +127,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 10,
+							"minor" : 2,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 751.0, 273.0, 600.0, 450.0 ],
+						"rect" : [ 741.0, 294.0, 600.0, 450.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -305,6 +305,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
 					"source" : [ "obj-3", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-44", 0 ],
+					"source" : [ "obj-4", 2 ]
 				}
 
 			}
