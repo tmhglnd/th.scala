@@ -36,7 +36,7 @@ A custom *jsui* file that shows a kslider-like object to allow for playing with 
 
 - **th.ftomb**
 
-Convert a frequency value to a MIDI note number combined with a pitch-bend value for use with microtuning and alternative tunings. Combine this object with the th.scala and th.stof. Choose between hires (-1 to 1) or lores (0 - 127). Useful when wanting to connect to ohter midi-devices that except pitch-bending via the `[noteout]` and `[bendout]` objects or `[midiformat @hires 1]` and `[midiout]`
+Convert a frequency value to a MIDI note number combined with a pitch-bend value for use with microtuning and alternative tunings. Combine this object with the th.scala and th.stof. Choose between hires (-1 to 1) or lores (0 - 127). Useful when wanting to connect to other midi-devices that accept pitch-bend via the `[noteout]` and `[bendout]` objects or `[midiformat @hires 1]` and `[midiout]`
 
 - **th.ftomb~**
 
